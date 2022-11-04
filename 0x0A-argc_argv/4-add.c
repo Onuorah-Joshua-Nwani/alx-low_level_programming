@@ -9,20 +9,27 @@
  * Return: Always 0 (Success)
  */
 
-int check_num(char *str)
+int main(int argc, char*argv[])
 {
-	/*Declaring variables*/
-	unsigned int count;
-
-	count = 0;
-	while (count < strlen(str)) /*count string*/
+	int result = 0, num, i, j, k;
+	
+	for (i = 1; i < argc; i++)
 	{
-		if (!isdigit(str[count])) /*check if str there are digit*/
+		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-			return (0);
+			for (argv[i][j] > '9' || argv[i][j] < '0')
+			{
+				printf("%s\n", "Error");
+				return (1);
+			}
 		}
-	count++;
 	}
 
-	return (1);
+	for (k = 1; k < argc; k++)
+	{
+		num = atoi(argv[k]);
+		result += num;
+	}
+	printf("%d\n", result);
+	return (0);
 }
