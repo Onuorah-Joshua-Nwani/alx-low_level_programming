@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
-#include <string.h>
+
 
 /**
- * check_num - check - string there are digit
- * @str: array str
- * Return: Always 0 (Success)
+ * main -> this is a function to print its name
+ * @argc: argc parameter
+ * @argc: an array of a command listed
+ * Return: 0 for success
  */
 
 int main(int argc, char*argv[])
@@ -17,7 +17,7 @@ int main(int argc, char*argv[])
 	{
 		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-			for (argv[i][j] > '9' || argv[i][j] < '0')
+		       if (argv[i][j] > '9' || argv[i][j] < '0')
 			{
 				printf("%s\n", "Error");
 				return (1);
