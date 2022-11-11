@@ -1,9 +1,10 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-#include <stdio.h>
-#include <stlib.h>
-#include <limits.h>
+/**
+ * File: MAIN.h
+ */
+
 
 int _putchar(char C);
 void *malloc_checked(unsigned int b);
